@@ -17,7 +17,7 @@ const App = () => {
             setLoading(true);
             try {
                 const response = await axios.get(
-                    "http://localhost:4000/api/socials"
+                    `${import.meta.env.VITE_REACT_BACKEND_URL}/api/socials`
                 );
                 setProfileData(response.data);
                 console.log(response.data);
@@ -147,3 +147,4 @@ const App = () => {
 };
 
 export default App;
+
